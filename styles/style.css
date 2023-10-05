@@ -1,0 +1,281 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    block-size: 100%;
+}
+
+.page {
+    inline-size: 1200px;
+    block-size: 100%;
+    margin: auto;
+    color: #fff;
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 18px;
+    background-color: #1b1919;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+/* для h2 задали */
+.content__video-card-title {
+    color: #fff;
+    font-family: Oswald, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+/* Поставил по середжине контейнекр */
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Разобрать */
+.content__list {
+    position: relative;
+    overflow: auto;
+    height: 298px;
+}
+
+/* Поставил тут всё по центру, задал отступ */
+.content {
+    display: flex;
+    gap: 30px;
+    align-items: end;
+}
+
+/* сделал кнопку найти по ширине и длине и сделал её прозрачной */
+button.search-form__submit-button {
+    align-self: auto;
+    width: 194px;
+    height: 35px;
+}
+
+/* задал кнопкам цвет, рамку, прозрачность и т.д  */
+.button {
+    font-size: 18px;
+    font-family: "Fira Sans Condensed", sans-serif;
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Выставил текст под видео */
+.search-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* задал скролл */
+.content__list {
+    height: 298px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.content__list::-webkit-scrollbar {
+    width: 0px; /* удалить пространство полосы прокрутки */
+    background: transparent; /* необязательно: просто сделал полосу прокрутки невидимой */
+}
+
+/* Сделал заголовок */
+.content__accent {
+    color: #545050;
+}
+
+.title {
+    font-size: 75px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: Oswald, sans-serif;
+    line-height: 70px;
+    margin-bottom: 20px;
+}
+
+/* Для текста в описании */
+.content__video-card-description {
+    color: #fff;
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 18px;
+    line-height: 16.2px; /* 90% */
+}
+
+/* астянуд в ширину и высоту контейнера и добавить отступы между заголовком и зоной с карточками. */
+.content__details {
+    width: 100%;
+    height: 100%;
+}
+
+/* сделал ширину и чтобы прогружалась */
+.result__video-container {
+    width: 733px;
+    padding-bottom: 16px;
+    position: relative;
+}
+
+/* убрал рамки */
+.search-form__fieldset {
+    border-style: none;
+}
+
+/* задал цвет и размер тексу + шрифт) */
+.search-form__fieldset-title {
+    font-weight: 400;
+    font-size: 18px;
+    font-family: "Fira Sans Condensed", sans-serif;
+}
+
+/* видео растянул на всю ширину и высоту */
+.result__video {
+    object-fit: cover;
+    object-position: center;
+    width: 733px;
+    height: 386px;
+}
+
+/* расстояние между видео */
+.content__list-item {
+    margin: 30px 0px;
+}
+
+/* справа выравниваю видео в скроле */
+.content__video-card {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* сделал картинку по ширине и длине */
+.content__video-card-thumbnail {
+    width: 194px;
+    height: 103px;
+    object-position: center;
+    object-fit: cover;
+}
+
+/* скрыл чекбоксы, чтобы нарисовать свои */
+.visually-hidden {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+/* задал чекбоксу нажатие рамзмер,растояние между текстом и галкой*/
+.search-form__pseudo-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* Растянул кнопку показать ещё */
+.more-button {
+    width: 100%;
+    height: 35px;
+}
+
+.search-form__label:not(:last-child) {
+    margin-right: 15px;
+}
+.search-form__checkbox-list {
+    display: flex;
+    margin-top: 4px;
+}
+
+/* опустил на один уровень */
+.search-form__label {
+    display: flex;
+}
+
+/* сделал санкт петербург по бокам и сверху и снизу, задал высоту, и т.д */
+.search-form__textfield {
+    font-weight: 400;
+    font-family: "Fira Sans Condensed", sans-serif;
+    width: 225px;
+    border-left: 0px solid #fff;
+    border-right: 0px solid #fff;
+    background-color: transparent;
+    font-size: 18px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+/* Задал дисплей блок, происходит нажимание  справа*/
+.content__card-link {
+    display: block;
+    margin: 2px;
+}
+
+/* Задал цвет и цвет рамки чекбоксу */
+.search-form__checkbox:checked + .search-form__pseudo-checkbox {
+    background: #fff;
+    outline: 1px solid #fff;
+    border: 1px solid #000;
+}
+
+/* срабатывает подчеркивание возле чекбоксов */
+.search-form__pseudo-checkbox:hover + .search-form__label-text {
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/*при нажатие на найти и покеазать ещё срабатывает подчеркивание*/
+.button:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Меняет цвет при нажатии */
+.button:active {
+    background-color: #545050;
+}
+
+.content__card-link:active {
+    background-color: #545050;
+}
+
+.content__card-link:focus-visible {
+    text-decoration: underline #fff;
+    text-underline-offset: 6px;
+}
