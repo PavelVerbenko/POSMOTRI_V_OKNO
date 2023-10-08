@@ -62,18 +62,22 @@ a:hover {
     justify-content: center;
 }
 
-/* Разобрать */
+/* задал скролл */
 .content__list {
     position: relative;
     overflow: auto;
     height: 298px;
+    width: 394px;
+    overflow-x: hidden;
+    flex-wrap: wrap;
 }
 
 /* Поставил тут всё по центру, задал отступ */
 .content {
     display: flex;
-    gap: 30px;
     align-items: end;
+    gap: 30px;
+    padding-right: 10px;
 }
 
 /* сделал кнопку найти по ширине и длине и сделал её прозрачной */
@@ -99,13 +103,7 @@ button.search-form__submit-button {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-}
-
-/* задал скролл */
-.content__list {
-    height: 298px;
-    overflow: auto;
-    overflow-x: hidden;
+    /* padding-right: 40px; */
 }
 
 .content__list::-webkit-scrollbar {
@@ -122,10 +120,9 @@ button.search-form__submit-button {
     font-size: 75px;
     text-transform: uppercase;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     font-family: Oswald, sans-serif;
     line-height: 70px;
-    margin-bottom: 20px;
 }
 
 /* Для текста в описании */
@@ -144,34 +141,49 @@ button.search-form__submit-button {
 
 /* сделал ширину и чтобы прогружалась */
 .result__video-container {
-    width: 733px;
-    padding-bottom: 16px;
+    padding-bottom: 10px;
     position: relative;
 }
 
 /* убрал рамки */
 .search-form__fieldset {
     border-style: none;
+
 }
+
+
 
 /* задал цвет и размер тексу + шрифт) */
 .search-form__fieldset-title {
     font-weight: 400;
+    line-height: 30px;
     font-size: 18px;
     font-family: "Fira Sans Condensed", sans-serif;
+    
 }
 
 /* видео растянул на всю ширину и высоту */
 .result__video {
     object-fit: cover;
     object-position: center;
-    width: 733px;
+    width: 711px;
     height: 386px;
+    
 }
 
 /* расстояние между видео */
 .content__list-item {
     margin: 30px 0px;
+}
+
+
+/* В первые разы когда делал не получилось, щас всё задал и всё гуд */
+.content__list-item:last-child {
+    margin: 0;
+}
+
+.content__list-item:first-child {
+    margin: 0;
 }
 
 /* справа выравниваю видео в скроле */
@@ -206,6 +218,7 @@ button.search-form__submit-button {
     border: 1px solid #fff;
     margin-right: 5px;
     cursor: pointer;
+    
 }
 
 /* Растянул кнопку показать ещё */
@@ -220,11 +233,18 @@ button.search-form__submit-button {
 .search-form__checkbox-list {
     display: flex;
     margin-top: 4px;
+    margin-bottom: 5px;
+}
+
+.search-form__fieldset {
+    line-height: 10px;
 }
 
 /* опустил на один уровень */
 .search-form__label {
     display: flex;
+    align-items: center;
+    
 }
 
 /* сделал санкт петербург по бокам и сверху и снизу, задал высоту, и т.д */
@@ -246,6 +266,16 @@ button.search-form__submit-button {
     margin: 2px;
 }
 
+.content__card-link:focus {
+    outline: none;
+}
+
+
+/* Задал цвет при нажатие как вы и говорили */
+.content__card-link_current {
+    background: #545050;
+}
+
 /* Задал цвет и цвет рамки чекбоксу */
 .search-form__checkbox:checked + .search-form__pseudo-checkbox {
     background: #fff;
@@ -258,6 +288,12 @@ button.search-form__submit-button {
     cursor: pointer;
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+
+
+/* при наведение срабатывает подчеркивание */
+.search-form__label-text {
+    cursor: pointer;
 }
 
 /*при нажатие на найти и покеазать ещё срабатывает подчеркивание*/
@@ -279,3 +315,28 @@ button.search-form__submit-button {
     text-decoration: underline #fff;
     text-underline-offset: 6px;
 }
+
+/* Задал цвет при вводе в поисковике */
+input {
+    color: #fff;
+}
+
+
+/* Теперь у элементов есть фокус */
+.search-form__label:focus-within {
+    outline: 1px solid rgb(255, 255, 255);
+}
+
+
+/* ещё исправил тут теперь тоже фокус */
+.content__card-link:focus-within {
+    outline: 1px solid rgb(255, 255, 255);
+}
+
+
+/* При наведение срабатывает подчеркивание */
+.content__video-card:hover {
+    text-decoration-line: underline;
+    color: white;
+}
+
