@@ -284,7 +284,7 @@ button.search-form__submit-button {
 }
 
 /* срабатывает подчеркивание возле чекбоксов */
-.search-form__pseudo-checkbox:hover + .search-form__label-text {
+.search-form__pseudo-checkbox + .search-form__label-text:hover {
     cursor: pointer;
     text-decoration: underline;
     text-underline-offset: 3px;
@@ -311,10 +311,7 @@ button.search-form__submit-button {
     background-color: #545050;
 }
 
-.content__card-link:focus-visible {
-    text-decoration: underline #fff;
-    text-underline-offset: 6px;
-}
+
 
 /* Задал цвет при вводе в поисковике */
 input {
